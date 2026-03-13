@@ -7,11 +7,11 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 from aiogram.types import BufferedInputFile
 
-from dotcha import CaptchaGenerator, Theme, Difficulty
+from dotcha import CaptchaGenerator, Theme, Difficulty, ColorSchema
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = "8394336727:AAH8JDUazMMHBjBAych6TnDqIefO6PP6eeQ"
 
 if not TOKEN:
     print("Error: BOT_TOKEN environment variable not set.")
@@ -19,7 +19,16 @@ if not TOKEN:
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
-generator = CaptchaGenerator(theme=Theme.LIGHT, difficulty=Difficulty.MEDIUM)
+
+# Custom Premium Theme: Cyber-Neon
+CYBER_THEME = ColorSchema(
+    background_colors=["#0f0c29", "#302b63", "#24243e"],  # Deep blue/purple gradient vibes
+    text_colors=["#00f2fe", "#4facfe", "#f093fb", "#f5576c"], # Vibrant neon accents
+    shape_colors=["#ffffff", "#00f2fe", "#4facfe"]
+)
+
+# Use the custom theme in the generator
+generator = CaptchaGenerator(theme=CYBER_THEME, difficulty=Difficulty.MEDIUM)
 
 user_sessions: Dict[int, str] = {}
 user_settings: Dict[int, Difficulty] = {}
