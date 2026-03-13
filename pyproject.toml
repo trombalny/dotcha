@@ -11,17 +11,19 @@ authors = [
 description = "Gestalt Illusion Captcha Generator for Python"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "Unlicense"}
+license = "Unlicense"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: The Unlicense (Unlicense)",
     "Operating System :: OS Independent",
     "Topic :: Multimedia :: Graphics",
     "Topic :: Security",
 ]
-dependencies = [
-    "Pillow>=9.0.0",
-]
+
+[tool.setuptools]
+packages = ["dotcha"]
+
+[project.dependencies]
+Pillow>=9.0.0
 
 [project.urls]
 "Homepage" = "https://github.com/trombalny/dotcha"
