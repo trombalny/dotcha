@@ -11,7 +11,7 @@ from dotcha import CaptchaGenerator, Theme, Difficulty, ColorSchema
 
 logging.basicConfig(level=logging.INFO)
 
-TOKEN = "8394336727:AAH8JDUazMMHBjBAych6TnDqIefO6PP6eeQ"
+TOKEN = os.getenv("BOT_TOKEN")
 
 if not TOKEN:
     print("Error: BOT_TOKEN environment variable not set.")
