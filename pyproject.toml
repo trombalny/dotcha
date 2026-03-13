@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotcha"
+version = "0.1.0"
+authors = [
+  { name="Dotcha Authors" },
+]
+description = "Gestalt Illusion Captcha Generator for Python"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Unlicense"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Security",
+]
+dependencies = [
+    "Pillow>=9.0.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/trombalnyL/dotcha"

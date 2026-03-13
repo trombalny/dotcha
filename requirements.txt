@@ -1,0 +1,4 @@
+Pillow>=9.0.0
+pytest
+pytest-asyncio
+aiogram>=3.0.0
