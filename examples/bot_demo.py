@@ -37,7 +37,7 @@ user_settings: Dict[int, Difficulty] = {}
 async def cmd_start(message: types.Message):
     """Sends a new PNG captcha."""
     diff = user_settings.get(message.from_user.id, Difficulty.MEDIUM)
-    gen = CaptchaGenerator(theme=Theme.LIGHT, difficulty=diff)
+    gen = CaptchaGenerator(theme=CYBER_THEME, difficulty=diff)
     
     captcha_text, image_bytes = await gen.agenerate()
     user_sessions[message.from_user.id] = captcha_text.upper()
@@ -52,7 +52,7 @@ async def cmd_start(message: types.Message):
 async def cmd_gif(message: types.Message):
     """Sends a new animated GIF captcha."""
     diff = user_settings.get(message.from_user.id, Difficulty.MEDIUM)
-    gen = CaptchaGenerator(theme=Theme.LIGHT, difficulty=diff)
+    gen = CaptchaGenerator(theme=CYBER_THEME, difficulty=diff)
     
     await message.answer("Generating animation... ⏳")
     captcha_text, image_bytes = await gen.agenerate_gif(frames=10)
