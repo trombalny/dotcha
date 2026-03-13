@@ -18,13 +18,12 @@ classifiers = [
     "Topic :: Multimedia :: Graphics",
     "Topic :: Security",
 ]
-
-[tool.setuptools]
-packages = ["dotcha"]
-
 dependencies = [
     "Pillow>=9.0.0",
 ]
+
+[tool.setuptools]
+packages = ["dotcha"]
 
 [project.urls]
 "Homepage" = "https://github.com/trombalny/dotcha"
