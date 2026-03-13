@@ -22,9 +22,9 @@ dp = Dispatcher()
 
 # Custom Premium Theme: Cyber-Neon
 CYBER_THEME = ColorSchema(
-    background_colors=["#0f0c29", "#302b63", "#24243e"],  # Deep blue/purple gradient vibes
-    text_colors=["#00f2fe", "#4facfe", "#f093fb", "#f5576c"], # Vibrant neon accents
-    shape_colors=["#ffffff", "#00f2fe", "#4facfe"]
+    background="#0f0c29",                          # Deep solid background
+    text_colors=["#00f2fe", "#4facfe", "#f093fb"],  # Neon text colors
+    background_colors=["#302b63", "#24243e"]        # Darker contrast shapes
 )
 
 # Use the custom theme in the generator
